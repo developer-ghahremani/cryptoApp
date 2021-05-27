@@ -1,13 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { getCoins } from "../../../api/coins";
-import MainLayout from "../../../layout/main";
-import CoinList from "./CoinList";
-import { HomeContext } from "./context";
-import NavBar from "./NavBar";
+import { createContext } from "react";
 
-const Home = () => {
-  const [state, setState] = useState({
+export const HomeContext = createContext({
+  state: {
     coins: [
       {
         "24hVolume": "41852790081.75633905864162857154",
@@ -57,32 +51,6 @@ const Home = () => {
         uuid: "Qwsogvtv82FCd",
       },
     ],
-  });
-
-  useEffect(() => {
-    loadCoins();
-  }, []);
-
-  const loadCoins = async () => {
-    try {
-      const { data } = await getCoins();
-      setState((s) => ({ ...s, coins: data.data.coins }));
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  return (
-    <HomeContext.Provider value={{ state, setState }}>
-      <MainLayout>
-        <NavBar />
-
-        <CoinList />
-      </MainLayout>
-    </HomeContext.Provider>
-  );
-};
-
-export default Home;
-
-const styles = StyleSheet.create({});
+  },
+  setState: () => {},
+});

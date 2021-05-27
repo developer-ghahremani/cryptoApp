@@ -10,3 +10,7 @@ export const pageName = {
     cart: "/cart",
   },
 };
+
+export const endPoints = {
+  coins: "/coins",
+};
