@@ -5,5 +5,8 @@ export const pageName = {
   splash: "/splash",
   home: {
     index: "/homeStack",
+    home: "/home",
+    favorite: "/favorite",
+    cart: "/cart",
   },
 };

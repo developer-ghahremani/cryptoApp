@@ -2,7 +2,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import LoadingModal from "./src/components/Modal/Loading";
+// import LoadingModal from "./src/components/Modal/Loading";
 import MainState from "./src/context/main/MainState";
 import Crypto from "./src/Crypto";
 
@@ -21,7 +21,7 @@ const App = () => {
     <MainState>
       <NavigationContainer>
         <Crypto />
-        <LoadingModal />
+        {/* <LoadingModal /> */}
       </NavigationContainer>
     </MainState>
   );
