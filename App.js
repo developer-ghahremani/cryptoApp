@@ -1,21 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import { useFonts } from "expo-font";
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import LoadingModal from "./src/components/Modal/Loading";
+import MainState from "./src/context/main/MainState";
+import Crypto from "./src/Crypto";
 
-export default function App() {
+const App = () => {
+  const [loaded] = useFonts({
+    nunitoLight: require("./assets/fonts/nunito/Nunito-Light.ttf"),
+    nunito: require("./assets/fonts/nunito/Nunito-Regular.ttf"),
+    nunitoBold: require("./assets/fonts/nunito/Nunito-Bold.ttf"),
+  });
+
+  if (!loaded) {
+    return null;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <MainState>
+      <NavigationContainer>
+        <Crypto />
+        <LoadingModal />
+      </NavigationContainer>
+    </MainState>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
+
+const styles = StyleSheet.create({});
