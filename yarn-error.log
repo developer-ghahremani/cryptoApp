@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-native-btr
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-native-svg-charts
 
 PATH: 
   C:\Program Files\AdoptOpenJDK\jdk-11.0.7.10-hotspot\bin;C:\Python38\Scripts\;C:\Python38\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Yarn\bin\;C:\ProgramData\chocolatey\bin;C:\Program Files\Genymobile\Genymotion\tools;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\Reza Ghahremani\AppData\Roaming\npm;C:\Program Files\Redis\;C:\Program Files\PuTTY\;C:\Users\Reza Ghahremani\AppData\Local\Microsoft\WindowsApps;C:\Users\Reza Ghahremani\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Reza Ghahremani\AppData\Local\Yarn\bin;C:\Users\Reza Ghahremani\AppData\Roaming\npm;
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'F:\projects\cryptoApp\node_modules\@babel\generator\node_modules\.bin'
+  Error: EPERM: operation not permitted, unlink 'F:\projects\cryptoApp\node_modules\react-native-btr\docs'
 
 npm manifest: 
   {
